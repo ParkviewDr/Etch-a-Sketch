@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Etch A Sketch</title>
+  <meta name="description" content=" ">
+  <meta name="author" content="Matt Mitchell Web Development">
+
+   
+   <script src="https://kit.fontawesome.com/6bf8533ada.js"></script>
+
+</head>
+
+<style>
+	
+	#top {
+		text-align: center;
+		margin: 50px 0px 70px 0px;
+	}
+	
+	
+	.container {
+		display:flex;
+		flex-wrap:wrap;
+		justify-content: center;
+		margin: 0px 200px;
+		
+		
+		
+	}
+	
+	.start {
+		
+	}
+	
+ .container > .box { 
+	  background-color: #f1f1f1;
+  width: 80px;
+		height:80px;
+		margin:0;
+		line-height:100px;
+  font-size: 10px;
+		border: 1px solid black;
+	
+	}
+	
+	
+	.box:hover {
+		background-color:red;
+	}
+
+	
+	</style>
+
+
+
+<body>
+
+
+
+<!-- SUB-MENU -->
+
+<div id = "top">
+	
+	<h1>Etch A Sketch</h1>
+	<p>by <a href="www.mmitchelldevelopment.com">Matt Mitchell Development</a></p>
+	
+</div>
+
+<div class ="container">
+
+	</div>
+
+<div class= "print"></div>
+
+<script>
+	
+
+		
+
+	
+//for loop creating grid 
+		  for (let i = 0; i < 98; i++) {
+
+					let container = document.querySelector('.container');
+						let content = document.createElement('div');
+							content.classList.add('box');
+								container.appendChild(content);
+		
+			
+				}
+
+	
+	
+	// add event listener for 
+	
+	
+
+	
+	</script>
+
+
+ 
+</body>
+</html>
+
