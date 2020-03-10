@@ -1,0 +1,122 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Etch A Sketch</title>
+  <meta name="description" content=" ">
+  <meta name="author" content="Matt Mitchell Web Development">
+
+   
+   <script src="https://kit.fontawesome.com/6bf8533ada.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+
+</head>
+
+<style>
+	
+	#top {
+		text-align: center;
+		margin: 50px 0px 70px 0px;
+		font-family: 'Spartan', sans-serif;
+	}
+	
+	
+	.container {
+		display:flex;
+		flex-wrap:wrap;
+		justify-content: center;
+		margin: 0px 200px;
+		
+	}
+	
+
+ .container > .box { 
+	  background-color: #f1f1f1;
+  width: 30px;
+		height: 30px;
+		margin:0;
+		line-height:100px;
+  font-size: 10px;
+		border: 1px solid black;
+	
+	}
+	
+	
+	.box:hover {
+		background-color:black;
+	}
+
+	
+	</style>
+
+
+
+<body>
+
+<div id = "top">
+	
+	<h1>Etch A Sketch</h1>
+	<p>by <a href="www.mmitchelldevelopment.com">Matt Mitchell Development</a></p>
+	<p>Drag the mouse over the grid below </p> <p>to see the different colors appear and slowly disappear</p>
+	
+</div>
+
+<div class ="container">
+
+	</div>
+
+<script>
+	
+
+					function createGrid(size) {
+						
+						for (let i = 0; i < 555; i++) {
+						let container = document.querySelector('.container');
+						let content = document.createElement('div');
+							content.classList.add('box');
+								container.appendChild(content);
+		
+				}
+						
+					}
+	
+	
+	createGrid(555);
+
+	
+			function getRandomColor() {
+						var letters = '0123456789ABCDEF'.split('');
+							var color = '#';
+								for (var i= 0; i < 6; i++ ) {
+										color += letters[Math.round(Math.random() * 15)];
+										}
+										return color;
+										}
+	;
+
+
+	//gets all boxes and for each box the background style gets assigned to the randomColor function
+	//setTimeout will put the background style back to the original color 
+	const allBoxes = document.querySelectorAll('.box')
+			allBoxes.forEach(function(box){
+				box.addEventListener('mouseover',function(e){
+					box.style.backgroundColor=getRandomColor();
+					setTimeout(() => box.style.background = '', 3000);
+				
+					})
+				})
+	
+
+	
+
+	
+	</script>
+
+
+ 
+</body>
+</html>
+
